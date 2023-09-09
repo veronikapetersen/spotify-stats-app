@@ -18,7 +18,6 @@ const getAccessToken = async () => {
     return response.json();
 };
 
-
 export const topTracks = async () => {
     const { access_token } = await getAccessToken();
 
@@ -30,7 +29,6 @@ export const topTracks = async () => {
 };
 
 
-
 export const topArtists = async () => {
     const { access_token } = await getAccessToken();
 
@@ -40,7 +38,6 @@ export const topArtists = async () => {
         },
     });
 };
-
 
 export const currentlyPlayingSong = async () => {
     const { access_token } = await getAccessToken();
