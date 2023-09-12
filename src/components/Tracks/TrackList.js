@@ -26,6 +26,7 @@ export default function TrackList() {
                     <Track
                         title={track.title}
                         image={track.coverImage.url}
+                        preview={track.preview}
                     />
                 </li>
             ))}

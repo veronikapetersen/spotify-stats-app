@@ -21,7 +21,6 @@ export default function CurrentlyPlaying(props) {
     return (
         <div className={classes.current}>
             <p>&#x1F3A7;Track: {data.title}</p>
-            <p> Listen to the music with headphones! &#x1F3A7;</p>
             <p>Artist: {data.artist}</p>
             <p>Album: {data.album}</p>
             <img src={data.albumImageUrl} alt="Album cover" />

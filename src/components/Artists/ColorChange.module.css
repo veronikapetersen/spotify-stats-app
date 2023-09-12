@@ -1,0 +1,8 @@
+.container {
+    background-color: lightblue;
+}
+
+.panel {
+    height: 400px;
+    border: 1px solid grey;
+}
