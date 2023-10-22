@@ -1,0 +1,17 @@
+.hero {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20vh;
+    margin-bottom: 20vh;
+}
+
+.title {
+    font-size: 3rem;
+}
+
+.text {
+    padding-top: 22px;
+    font-size: 1.2rem;
+}

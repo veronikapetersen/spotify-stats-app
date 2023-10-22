@@ -2,5 +2,15 @@
     list-style: none;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;   
+    justify-content: space-between;
+}
+
+.h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.text {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
 }
