@@ -1,29 +1,50 @@
 import classes from "./ArtistList.module.css";
 import Artist from "./Artist";
 import { useEffect, useState } from "react";
-
-//swiper
 import { useRef } from 'react';
 import { register } from 'swiper/element/bundle';
 register();
 
 export default function ArtistList() {
 
-    //swiper
     const swiperElRef = useRef(null);
 
     useEffect(() => {
-        swiperElRef.current.addEventListener('progress', (e) => {
-            const [swiper, progress] = e.detail;
-            console.log(progress);
-        });
+        const swiperContainer = swiperElRef.current;
+        const params = {
+            pagination: true,
+            // navigation: true,
+            mousewheel: true,
+            slidesPerView: 1,
+            injectStyles: [
+                `
+                .swiper-button-next,
+                .swiper-button-prev {
+                  color: red;
+                  display: none;
+                }
+                .swiper-pagination-bullet{
+                  background-color: red;
+                }
 
-        swiperElRef.current.addEventListener('slidechange', (e) => {
-            console.log('slide changed');
-        });
+                .swiper:hover .swiper-button-next, 
+                .swiper:hover .swiper-button-prev {
+                  display: block;
+                }
+
+                .swiper-wrapper {
+                    padding-bottom: 30px;
+                }
+                .swiper-pagination {
+                    bottom: 10px;
+                }
+                `
+            ]
+        }
+
+        Object.assign(swiperContainer, params);
+        swiperContainer.initialize();
     }, []);
-    //swiper done
-
 
     const [data, setData] = useState([]);
     useEffect(() => {
@@ -47,15 +68,17 @@ export default function ArtistList() {
 
             <swiper-container
                 ref={swiperElRef}
-                slides-per-view="3"
-                navigation="true"
-                pagination="true"
+                init="false"
             >
                 {data.map((artist) => (
                     <swiper-slide key={artist.id}>
                         <Artist
                             name={artist.name}
+                            followers={artist.followers}
                             image={artist.coverImage.url}
+                            genres={artist.genres}
+                            popularity={artist.popularity}
+                            url={artist.url}
                         />
                     </swiper-slide>
                 ))

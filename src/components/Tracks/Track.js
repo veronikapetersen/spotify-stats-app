@@ -8,20 +8,21 @@ export default function Track(props) {
     const audioRef = useRef(null);
 
     const handleMouseEnter = () => {
-        audioRef.current.play();
+        // audioRef.current.play();
     };
 
     const handleMouseLeave = () => {
-        audioRef.current.pause();
-        audioRef.current.currentTime = 0;
+        // audioRef.current.pause();
+        // audioRef.current.currentTime = 0;
     };
 
     return (
         <Card>
             <div className={classes.track} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-                <Image src={props.image} />
+                {/* <Image src={props.image}/> */}
+                <img src={props.image} className={classes['track-image']}></img>
                 <p>{props.title}</p>
-                <audio ref={audioRef} src={props.preview}></audio>
+                {/* <audio ref={audioRef} src={props.preview}></audio> */}
             </div>
         </Card>
     )

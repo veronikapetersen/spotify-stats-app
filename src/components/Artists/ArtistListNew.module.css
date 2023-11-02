@@ -1,0 +1,15 @@
+.singleslide {
+    border: 1px solid black;
+    padding: 20px;
+}
+
+.div {
+    border: 1px solid black;
+    height: 500px;
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

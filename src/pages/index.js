@@ -6,24 +6,31 @@ import TrackList from "@/components/Tracks/TrackList";
 import CurrentlyPlaying from "@/components/CurrentlyPlaying/CurrentlyPlaying";
 import ColorChange from "@/components/Artists/ColorChange";
 import Hero from "@/components/ui/Hero";
+import ArtistListNew from "@/components/Artists/ArtistListNew";
 
 export default function HomePage() {
   return (
-    <Layout>
-      <Hero />
-      <CurrentlyPlaying />
+
+    <>
+
+
+       <Layout>
+      {/* <Hero /> */}
+      {/* <CurrentlyPlaying /> */}
       <Section>
         <ArtistList />
       </Section>
       {/* <ColorChange
-        color={"green"}>
-        <Section>
+        color={"green"}> */}
+      {/* <Section>
           <TrackList />
-        </Section>
-      </ColorChange>
-        <Section>
-          <ArtistList />
         </Section> */}
-    </Layout>
+      {/* </ColorChange> */}
+      {/* </Layout >
+      <Layout> */}
+
+        {/* <ArtistListNew></ArtistListNew> */}
+      </Layout>
+    </>
   );
 }

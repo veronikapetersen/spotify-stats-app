@@ -9,7 +9,10 @@ export default async function handler(req, res) {
     url: artist.external_urls.spotify,
     coverImage: artist.images[1],
     followers: artist.followers.total,
+    popularity: artist.popularity,
+    genres: artist.genres,
   }));
+
 
   res.setHeader(
     "Cache-Control",
