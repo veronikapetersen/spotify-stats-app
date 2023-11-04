@@ -3,10 +3,9 @@ import classes from './Hero.module.css';
 export default function Hero() {
     return (
         <div className={classes.hero}>
-            <h1 className={classes.title}>Hero Lorem Ipsum</h1>
+            <h1 className={classes.title}>Unveil Your Musical Preferences</h1>
             <p className={classes.text}>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia
-                voluptatibus, voluptatem, quas.
+                Deep dive into your Spotify listening habits. Find out your top artists, tracks, genres, and more.
             </p>
         </div>
     )

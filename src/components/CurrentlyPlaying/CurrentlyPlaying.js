@@ -22,14 +22,19 @@ export default function CurrentlyPlaying() {
         <div className={classes.doublesection}>
 
             <div className={classes.left}>
-                <h2 className={classes.h2}>Currently Playing</h2>
-                <p>&#x1F3A7;Track: {data.title}</p>
-                <p>Artist: {data.artist}</p>
-                <p>Album: {data.album}</p>
+                <img src={data.albumImageUrl} alt="Album cover" />
             </div>
 
-            <div className={classes.current}>
-                <img src={data.albumImageUrl} alt="Album cover" />
+            <div className={classes.right}>
+                <div>
+                    <h2 className={classes.h2}>Currently Playing</h2>
+                </div>
+                <div className={classes['track-info']}>
+                    {/* <p>&#x1F3A7;Track: {data.title}</p> */}
+                    <p className={classes['track-title']}>{data.title}</p>
+                    <p className={classes['track-artist']}>by {data.artist}</p>
+                    <p className={classes['track-album']}>Album: {data.album}</p>
+                </div>
             </div>
         </div>
     )

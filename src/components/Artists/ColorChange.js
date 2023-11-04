@@ -15,23 +15,22 @@ const ColorChange = (props) => {
 
         const section = sectionRef.current;
 
-
         gsap.to(
             section,
             {
                 backgroundColor: props.color,
-                duration: 1,
+                duration: 0.7,
                 scrollTrigger: {
                     trigger: section,
-                    toggleActions: "play reverse play reverse",
-                    start: "top 30%",
-                    end: "bottom 40%",
-                    markers: true,
+                    // toggleActions: "play reverse play reverse",
+                    // toggleActions: "none play none reverse",
+                    toggleActions: props.toggleActions,
+                    start: props.start,
+                    end: props.end,
+                    markers: props.markers
                 },
             }
         );
-
-
     }, [])
 
     return (

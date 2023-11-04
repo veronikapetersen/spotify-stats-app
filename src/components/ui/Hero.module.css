@@ -3,15 +3,33 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 20vh;
-    margin-bottom: 20vh;
+    background-color: #c3f0c8;
+    /* border: 1px solid grey; */
+
+    padding: 30vh 16px;
+    /* padding-top: 20vh;
+    padding-bottom: 20vh; */
 }
 
 .title {
-    font-size: 3rem;
+    font-size: 2rem;
 }
 
 .text {
     padding-top: 22px;
     font-size: 1.2rem;
 }
+
+@media (min-width: 576px) {}
+
+@media (min-width: 768px) {
+    .title {
+        font-size: 3rem;
+    }
+}
+
+@media (min-width: 992px) {}
+
+@media (min-width: 1200px) {}
+
+@media (min-width: 1400px) {}

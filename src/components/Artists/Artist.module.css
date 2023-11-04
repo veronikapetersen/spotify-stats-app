@@ -17,3 +17,14 @@
 .artist-info>p {
     margin-bottom: 10px;
 }
+
+.genres-list {
+    display: flex;
+}
+
+.genre {
+    margin-right: 15px;
+    background-color: grey;
+    padding: 4px 16px;
+    border-radius: 8px;
+}
