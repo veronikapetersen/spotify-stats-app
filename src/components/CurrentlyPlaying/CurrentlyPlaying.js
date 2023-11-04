@@ -20,9 +20,11 @@ export default function CurrentlyPlaying() {
 
     return (
         <div className={classes.doublesection}>
-
             <div className={classes.left}>
-                <img src={data.albumImageUrl} alt="Album cover" />
+                <div className={classes['images-container']}>
+                    <img className={classes.topimage} src={data.albumImageUrl} alt="Album cover" />
+                    <img className={classes.vinyl} src="/images/vinyl.png" alt="Vinyl" />
+                </div>
             </div>
 
             <div className={classes.right}>

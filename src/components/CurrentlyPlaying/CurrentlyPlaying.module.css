@@ -3,21 +3,61 @@
     grid-template-columns: 1fr 1fr;
 }
 
+.topimage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
 .left img {
     height: 400px;
     transform: perspective(800px) rotateY(-25deg) scale(0.9) rotateX(10deg);
     filter: blur(2px);
-    opacity: 0.5;
     transition: 0.6s ease all;
-    border-radius: 2rem;
-    background: linear-gradient(325deg, #3f5efb, #fc466b);
+    border-radius: 4px;
 }
 
-.left img:hover {
+.images-container {
+    display: inline-block;
+    position: relative;
+}
+
+.images-container:hover img {
     transform: perspective(800px) rotateY(15deg) translateY(-50px) rotateX(10deg) scale(1);
     filter: blur(0);
-    opacity: 1;
 }
+
+.images-container:hover .vinyl {
+    transform: perspective(800px) rotateY(15deg) translateY(-50px) rotateX(10deg) translateX(55%);
+    transition-delay: 0.2s;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .right {
     display: flex;

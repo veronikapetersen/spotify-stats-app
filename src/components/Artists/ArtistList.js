@@ -18,18 +18,15 @@ export default function ArtistList() {
             slidesPerView: 1,
             injectStyles: [
                 `
-                .swiper-button-next,
-                .swiper-button-prev {
-                  color: red;
-                  display: none;
-                }
                 .swiper-pagination-bullet{
-                  background-color: red;
+                  background-color: #ffcdd2;
+                  height: 12px;
+                  width: 12px;
+                  opacity: 0.5;
                 }
 
-                .swiper:hover .swiper-button-next, 
-                .swiper:hover .swiper-button-prev {
-                  display: block;
+                .swiper-pagination-bullet-active {
+                    opacity: 1;
                 }
 
                 .swiper-wrapper {

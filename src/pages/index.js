@@ -8,12 +8,16 @@ import CurrentlyPlaying from "@/components/CurrentlyPlaying/CurrentlyPlaying";
 import ColorChange from "@/components/Artists/ColorChange";
 import Hero from "@/components/ui/Hero";
 import ArtistListNew from "@/components/Artists/ArtistListNew";
+import Quote from "@/components/ui/Quote";
 
 export default function HomePage() {
   return (
 
     <>
       <Layout>
+        
+        {/* <Quote /> */}
+
         <Hero />
         <ColorChange
           color="#AD96DC"
