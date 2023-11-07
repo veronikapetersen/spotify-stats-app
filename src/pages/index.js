@@ -16,11 +16,11 @@ export default function HomePage() {
     <>
       <Layout>
 
-        {/* <Quote /> */}
+        <Quote />
 
-        {/* <Hero /> */}
-        
-        {/* <ColorChange
+        <Hero />
+
+        <ColorChange
           color="#AD96DC"
           start="top 30%"
           end="bottom 40%"
@@ -31,9 +31,9 @@ export default function HomePage() {
               <CurrentlyPlaying />
             </SectionWrapper>
           </Section>
-        </ColorChange> */}
+        </ColorChange>
 
-        {/* <ColorChange
+        <ColorChange
           color="#AD96DC"
           start="top 40%"
           end="bottom 60%"
@@ -44,7 +44,7 @@ export default function HomePage() {
               <ArtistList />
             </SectionWrapper>
           </Section>
-        </ColorChange> */}
+        </ColorChange>
 
         <Section>
           <SectionWrapper>

@@ -3,6 +3,7 @@
     border: 1px solid black;
     margin-bottom: 20px;
     color: rgb(128, 128, 128);
+    cursor: none;
 }
 
 .track-image {
@@ -19,7 +20,6 @@
     width: 100%;
     display: grid;
     grid-template-columns: 4fr 4fr 1fr;
-    gap: 10px;
     align-content: center;
 }
 
@@ -45,4 +45,23 @@
     margin-right: 2px;
     fill: rgb(128, 128, 128) !important;
     color: rgb(128, 128, 128) !important;
+}
+
+
+.circlecursor {
+    position: fixed;
+    background-color: black;
+    color: white;
+    padding: 5px 10px;
+    text-align: center;
+    font-size: 16px;
+    display: none;
+}
+
+.track:hover .circlecursor {
+    display: block;
+}
+
+.circlecursor.show {
+    display: block;
 }
