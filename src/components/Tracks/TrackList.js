@@ -18,18 +18,26 @@ export default function TrackList() {
     }, []);
 
     return (
+        <>
+            <h2 className={classes.h2}>Top Tracks</h2>
+            <p className={classes.text}>Here are my top songs based on the number of times I've listened to them.</p>
+            <ul className={classes['track-list']}>
 
-        <ul className={classes['track-list']}>
-
-            {data.map((track) => (
-                <li key={track.id}>
-                    <Track
-                        title={track.title}
-                        image={track.coverImage.url}
-                        preview={track.preview}
-                    />
-                </li>
-            ))}
-        </ul>
+                {data.map((track) => (
+                    <li key={track.id}>
+                        <Track
+                            title={track.title}
+                            image={track.coverImage.url}
+                            preview={track.preview}
+                            artist={track.artist}
+                            length={track.length}
+                            album_type={track.album_type}
+                            album_name={track.album_name}
+                            explicit={track.explicit}
+                        />
+                    </li>
+                ))}
+            </ul>
+        </>
     )
 }

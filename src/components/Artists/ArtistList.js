@@ -59,9 +59,7 @@ export default function ArtistList() {
     return (
         <>
             <h2 className={classes.h2}>Top Artists</h2>
-            <p className={classes.text}>
-                Here are my top artists based on the number of times I've listened to their songs.
-            </p>
+            <p className={classes.text}>Here are my top artists based on the number of times I've listened to their songs.</p>
 
             <swiper-container
                 ref={swiperElRef}
