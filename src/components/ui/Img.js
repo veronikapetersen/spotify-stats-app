@@ -1,4 +1,4 @@
-import classes from './Img.module.css';
+import classes from './Img.module.scss';
 
 export default function Image(props) {
     return (

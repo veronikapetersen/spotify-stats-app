@@ -1,23 +1,23 @@
 .quote-text {
-    display: flex;
-    align-items: center;
-    height: 300px;
-    position: sticky;
-    top: 130px;
-    mix-blend-mode: overlay;
-    color: black;
-    font-size: 64px;
-    padding: 50px;
+  display: flex;
+  align-items: center;
+  height: 300px;
+  position: sticky;
+  top: 130px;
+  mix-blend-mode: overlay;
+  color: black;
+  font-size: 64px;
+  padding: 50px;
 }
 
 .quote-section-one {
-    height: 50vh;
-    width: 100%;
-    background: coral;
+  height: 50vh;
+  width: 100%;
+  background: coral;
 }
 
 .quote-section-two {
-    height: 50vh;
-    width: 100%;
-    background: LightSeaGreen;
-}
+  height: 50vh;
+  width: 100%;
+  background: LightSeaGreen;
+}/*# sourceMappingURL=Quote.module.css.map */

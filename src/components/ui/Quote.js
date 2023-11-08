@@ -1,4 +1,4 @@
-import classes from './Quote.module.css';
+import classes from './Quote.module.scss';
 
 export default function Quote() {
     return (

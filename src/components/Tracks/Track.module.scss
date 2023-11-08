@@ -1,0 +1,68 @@
+.track {
+    display: flex;
+    border: 1px solid black;
+    margin-bottom: 20px;
+    color: rgb(128, 128, 128);
+    cursor: none;
+}
+
+.track-image {
+    display: flex;
+    margin-right: 20px;
+
+    img {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+
+.track-info {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 4fr 4fr 1fr;
+    align-content: center;
+}
+
+.track-info>div {
+    display: grid;
+    align-content: center;
+}
+
+.track-title {
+    margin-bottom: 5px;
+    color: black;
+    font-weight: bold;
+}
+
+.track-artist {
+    display: flex;
+    align-items: center;
+}
+
+.track-artist svg {
+    width: 20px;
+    height: 20px;
+    margin-right: 2px;
+    fill: rgb(128, 128, 128) !important;
+    color: rgb(128, 128, 128) !important;
+}
+
+
+.circlecursor {
+    position: fixed;
+    background-color: black;
+    color: white;
+    padding: 5px 10px;
+    text-align: center;
+    font-size: 16px;
+    display: none;
+}
+
+.track:hover .circlecursor {
+    display: block;
+}
+
+.circlecursor.show {
+    display: block;
+}

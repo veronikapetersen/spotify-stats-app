@@ -1,4 +1,4 @@
-import classes from './SectionWrapper.module.css';
+import classes from './SectionWrapper.module.scss';
 
 export default function SectionWrapper(props) {
 

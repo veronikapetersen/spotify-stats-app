@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import classes from "./Artist.module.css";
+import classes from "./Artist.module.scss";
 import Card from "@/components/ui/Card";
 import Image from "@/components/ui/Img";
 // import Tippy from '@tippyjs/react';

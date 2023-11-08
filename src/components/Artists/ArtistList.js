@@ -1,4 +1,4 @@
-import classes from "./ArtistList.module.css";
+import classes from "./ArtistList.module.scss";
 import Artist from "./Artist";
 import { useEffect, useState } from "react";
 import { useRef } from 'react';

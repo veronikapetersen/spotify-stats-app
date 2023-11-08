@@ -1,4 +1,4 @@
-import classes from "./CurrentlyPlaying.module.css";
+import classes from "./CurrentlyPlaying.module.scss";
 
 import { useEffect, useState } from "react";
 

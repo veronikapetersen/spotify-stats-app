@@ -1,63 +1,61 @@
 .artist-card {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    height: 500px;
-    margin: 10px;
-    border-radius: 10px;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 500px;
+  margin: 10px;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 .artist-name {
-    font-size: 42px;
-    margin-bottom: 3rem;
-    display: flex;
+  font-size: 42px;
+  margin-bottom: 3rem;
+  display: flex;
 }
 
 .genres-list {
-    display: flex;
+  display: flex;
 }
 
 .genre {
-    margin-right: 15px;
-    /* background-color: #ffc864; */
-    background-color: #AD96DC;
-    padding: 4px 16px;
-    border-radius: 8px;
+  margin-right: 15px;
+  /* background-color: #ffc864; */
+  background-color: #AD96DC;
+  padding: 4px 16px;
+  border-radius: 8px;
 }
 
 .artist-link {
-    text-decoration: none;
-    color: #000;
-
-
-    display: inline-block;
-    position: relative;
+  text-decoration: none;
+  color: #000;
+  display: inline-block;
+  position: relative;
 }
 
 .artist-link:after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    transform: scaleX(0);
-    height: 2px;
-    bottom: -10px;
-    left: 0;
-    /* background-color: #AD96DC; */
-    background-color: #000;
-    transform-origin: bottom right;
-    transition: transform 0.25s ease-out;
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: -10px;
+  left: 0;
+  /* background-color: #AD96DC; */
+  background-color: #000;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
 }
 
 .artist-link:hover {
-    cursor: pointer;
-    /* color: #AD96DC; */
+  cursor: pointer;
+  /* color: #AD96DC; */
 }
 
 .artist-link:hover:after {
-    transform: scaleX(1);
-    transform-origin: bottom left;
+  transform: scaleX(1);
+  transform-origin: bottom left;
 }
 
 /* .artist-card a {
@@ -66,4 +64,4 @@
 
 .icon {
     padding: 5px 10px;
-} */
+} *//*# sourceMappingURL=Artist.module.css.map */

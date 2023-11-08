@@ -1,5 +1,5 @@
 import { useState, useRef } from 'react';
-import classes from './Track.module.css';
+import classes from './Track.module.scss';
 import Card from '@/components/ui/Card';
 import Image from '@/components/ui/Img';
 

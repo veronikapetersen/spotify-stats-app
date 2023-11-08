@@ -1,4 +1,4 @@
-import classes from './Section.module.css';
+import classes from './Section.module.scss';
 
 export default function Section(props) {
 

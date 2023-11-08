@@ -1,4 +1,4 @@
-import classes from "./ArtistListNew.module.css";
+import classes from "./ArtistListNew.module.scss";
 // import { useEffect, useState } from "react";
 // import { useRef } from 'react';
 // import { register } from 'swiper/element/bundle';

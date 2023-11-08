@@ -1,5 +1,5 @@
 import { useRef, useEffect } from 'react';
-import classes from "./ColorChange.module.css";
+import classes from "./ColorChange.module.scss";
 
 import gsap from "gsap";
 

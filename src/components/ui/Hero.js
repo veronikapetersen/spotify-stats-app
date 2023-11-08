@@ -1,4 +1,4 @@
-import classes from './Hero.module.css';
+import classes from './Hero.module.scss';
 
 export default function Hero() {
     return (
