@@ -21,7 +21,6 @@
 
 .genre {
     margin-right: 15px;
-    /* background-color: #ffc864; */
     background-color: #AD96DC;
     padding: 4px 16px;
     border-radius: 8px;
@@ -30,40 +29,28 @@
 .artist-link {
     text-decoration: none;
     color: #000;
-
-
     display: inline-block;
     position: relative;
-}
 
-.artist-link:after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    transform: scaleX(0);
-    height: 2px;
-    bottom: -10px;
-    left: 0;
-    /* background-color: #AD96DC; */
-    background-color: #000;
-    transform-origin: bottom right;
-    transition: transform 0.25s ease-out;
-}
+    &::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        transform: scaleX(0);
+        height: 2px;
+        bottom: -10px;
+        left: 0;
+        background-color: #000;
+        transform-origin: bottom right;
+        transition: transform 0.25s ease-out;
+    }
 
-.artist-link:hover {
-    cursor: pointer;
-    /* color: #AD96DC; */
-}
+    &:hover {
+        cursor: pointer;
 
-.artist-link:hover:after {
-    transform: scaleX(1);
-    transform-origin: bottom left;
+        &::after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+        }
+    }
 }
-
-/* .artist-card a {
-    display: flex;
-}
-
-.icon {
-    padding: 5px 10px;
-} */

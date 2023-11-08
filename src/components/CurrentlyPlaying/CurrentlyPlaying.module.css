@@ -23,12 +23,10 @@
   display: inline-block;
   position: relative;
 }
-
 .images-container:hover img {
   transform: perspective(800px) rotateY(15deg) translateY(-50px) rotateX(10deg) scale(1);
   filter: blur(0);
 }
-
 .images-container:hover .vinyl {
   transform: perspective(800px) rotateY(15deg) translateY(-50px) rotateX(10deg) translateX(55%);
   transition-delay: 0.2s;

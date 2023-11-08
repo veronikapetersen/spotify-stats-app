@@ -16,17 +16,16 @@
     }
 }
 
-
 .track-info {
     width: 100%;
     display: grid;
     grid-template-columns: 4fr 4fr 1fr;
     align-content: center;
-}
 
-.track-info>div {
-    display: grid;
-    align-content: center;
+    &>div {
+        display: grid;
+        align-content: center;
+    }
 }
 
 .track-title {
@@ -38,16 +37,15 @@
 .track-artist {
     display: flex;
     align-items: center;
-}
 
-.track-artist svg {
-    width: 20px;
-    height: 20px;
-    margin-right: 2px;
-    fill: rgb(128, 128, 128) !important;
-    color: rgb(128, 128, 128) !important;
+    svg {
+        width: 20px;
+        height: 20px;
+        margin-right: 2px;
+        fill: rgb(128, 128, 128) !important;
+        color: rgb(128, 128, 128) !important;
+    }
 }
-
 
 .circlecursor {
     position: fixed;
@@ -57,12 +55,12 @@
     text-align: center;
     font-size: 16px;
     display: none;
+
+    &.show {
+        display: block;
+    }
 }
 
 .track:hover .circlecursor {
-    display: block;
-}
-
-.circlecursor.show {
     display: block;
 }

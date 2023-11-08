@@ -21,7 +21,6 @@
   grid-template-columns: 4fr 4fr 1fr;
   align-content: center;
 }
-
 .track-info > div {
   display: grid;
   align-content: center;
@@ -37,7 +36,6 @@
   display: flex;
   align-items: center;
 }
-
 .track-artist svg {
   width: 20px;
   height: 20px;
@@ -55,11 +53,10 @@
   font-size: 16px;
   display: none;
 }
-
-.track:hover .circlecursor {
+.circlecursor.show {
   display: block;
 }
 
-.circlecursor.show {
+.track:hover .circlecursor {
   display: block;
 }/*# sourceMappingURL=Track.module.css.map */
