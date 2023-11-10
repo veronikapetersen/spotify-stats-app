@@ -80,16 +80,19 @@ export default function ArtistListNew() {
     }, []);
 
     return (
-        <swiper-container
-            ref={swiperElRef}
-            mousewheel="true"
-        >
-            <swiper-slide><div className={classes.div}>Slide 1</div></swiper-slide>
-            <swiper-slide><div className={classes.div}>Slide 2</div></swiper-slide>
-            <swiper-slide><div className={classes.div}>Slide 3</div></swiper-slide>
-            <swiper-slide><div className={classes.div}>Slide 4</div></swiper-slide>
-            <swiper-slide><div className={classes.div}>Slide 5</div></swiper-slide>
-            ...
-        </swiper-container>
+        <div className={classes.wrapper}>
+            <p>lorem ipsum </p>
+            <swiper-container
+                ref={swiperElRef}
+                mousewheel="true"
+            >
+
+                <swiper-slide><div className={classes.div}>hey there</div></swiper-slide>
+                <swiper-slide><div className={classes.div}>Slide 2</div></swiper-slide>
+                <swiper-slide><div className={classes.div}>Slide 3</div></swiper-slide>
+                <swiper-slide><div className={classes.div}>Slide 4</div></swiper-slide>
+                <swiper-slide><div className={classes.div}>Slide 5</div></swiper-slide>
+            </swiper-container >
+        </div>
     );
 };

@@ -16,8 +16,6 @@ export default function HomePage() {
     <>
       <Layout>
 
-        <Quote />
-
         <Hero />
 
         <ColorChange
@@ -37,7 +35,7 @@ export default function HomePage() {
           color="#AD96DC"
           start="top 40%"
           end="bottom 60%"
-          toggleActions="play reverse play reverse"
+          toggleActions="play none play reverse"
           markers={false}>
           <Section>
             <SectionWrapper>
@@ -47,6 +45,13 @@ export default function HomePage() {
         </ColorChange>
 
         <Section>
+          <SectionWrapper>
+            <Quote />
+          </SectionWrapper>
+        </Section>
+
+        <Section
+          rounded={true}>
           <SectionWrapper>
             <TrackList />
           </SectionWrapper>

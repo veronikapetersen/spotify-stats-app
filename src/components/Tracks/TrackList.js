@@ -22,7 +22,9 @@ export default function TrackList() {
         <>
             <h2 className={classes.h2}>Top Tracks</h2>
             {/* <p className={classes.text}>Here are my top songs based on the number of times I've listened to them.</p> */}
-            <p className={classes.text}>Hover the track to listen to the audio snippet.</p>
+            <div className={classes.text}>
+                <p>Hover the track to listen to the audio snippet.</p>
+            </div>
             <br></br>
             <br></br>
             <ul className={classes['track-list']}>

@@ -1,15 +1,18 @@
-.singleslide {
-  border: 1px solid black;
-  padding: 20px;
-}
-
 .div {
   border: 1px solid black;
   height: 500px;
   text-align: center;
   font-size: 18px;
-  background: #fff;
+  background: black;
+  color: white;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.wrapper {
+  position: fixed;
+  bottom: 0;
+  z-index: -1;
+  display: block;
 }/*# sourceMappingURL=ArtistListNew.module.css.map */

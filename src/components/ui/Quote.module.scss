@@ -1,23 +1,21 @@
-.quote-text {
+.content {
     display: flex;
-    align-items: center;
-    height: 300px;
-    position: sticky;
-    top: 130px;
-    mix-blend-mode: overlay;
-    color: black;
-    font-size: 64px;
-    padding: 50px;
+    flex-direction: column;
+    border: 1px solid black;
+    overflow-x: hidden;
+    background-color: #161616;
 }
 
-.quote-section-one {
-    height: 50vh;
-    width: 100%;
-    background: coral;
-}
-
-.quote-section-two {
-    height: 50vh;
-    width: 100%;
-    background: LightSeaGreen;
+.element {
+    background: linear-gradient(to right,
+            rgb(255, 255, 255) 50%,
+            rgb(37, 37, 37) 50%);
+    background-size: 200% 100%;
+    background-position-x: 100%;
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    margin-left: 50px;
+    line-height: 1.6;
+    font-size: 4rem;
 }

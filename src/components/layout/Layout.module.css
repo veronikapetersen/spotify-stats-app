@@ -1,5 +1,5 @@
 .main {
-  /* margin: 3rem auto; */
-  /* width: 80%; */
-  /* border: 2px solid red; */
+  position: relative;
+  z-index: 99;
+  background-color: black;
 }/*# sourceMappingURL=Layout.module.css.map */

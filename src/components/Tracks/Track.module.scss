@@ -1,9 +1,8 @@
 .track {
     display: flex;
     border: 1px solid black;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     color: rgb(128, 128, 128);
-    cursor: none;
 }
 
 .track-image {
@@ -47,20 +46,20 @@
     }
 }
 
-.circlecursor {
-    position: fixed;
-    background-color: black;
-    color: white;
-    padding: 5px 10px;
-    text-align: center;
-    font-size: 16px;
-    display: none;
+// .circlecursor {
+//     position: fixed;
+//     background-color: black;
+//     color: white;
+//     padding: 5px 10px;
+//     text-align: center;
+//     font-size: 16px;
+//     display: none;
 
-    &.show {
-        display: block;
-    }
-}
+//     &.show {
+//         display: block;
+//     }
+// }
 
-.track:hover .circlecursor {
-    display: block;
-}
+// .track:hover .circlecursor {
+//     display: block;
+// }

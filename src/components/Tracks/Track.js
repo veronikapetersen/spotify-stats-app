@@ -5,37 +5,37 @@ import Image from '@/components/ui/Img';
 
 export default function Track(props) {
 
-    const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
-    const [hovered, setHovered] = useState(false);
+    // const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
+    // const [hovered, setHovered] = useState(false);
 
-    const handleMouseMove = (e) => {
-        setCursorPosition({ x: e.clientX, y: e.clientY });
-    }
+    // const handleMouseMove = (e) => {
+    //     setCursorPosition({ x: e.clientX, y: e.clientY });
+    // }
 
     const audioRef = useRef(null);
     const handleMouseEnter = () => {
-        setHovered(true);
-        audioRef.current.play();
+        // setHovered(true);
+        // audioRef.current.play();
     };
     const handleMouseLeave = () => {
-        setHovered(false);
-        audioRef.current.pause();
-        audioRef.current.currentTime = 0;
+        // setHovered(false);
+        // audioRef.current.pause();
+        // audioRef.current.currentTime = 0;
     };
 
     return (
         <Card>
             <div className={classes.track}
-                onMouseMove={handleMouseMove}
+                // onMouseMove={handleMouseMove}
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
             >
-                <div
+                {/* <div
                     className={`${classes.circlecursor} ${hovered ? classes.show : ''}`}
                     style={{ left: `${cursorPosition.x}px`, top: `${cursorPosition.y}px` }}
                 >
                     playing audio
-                </div>
+                </div> */}
                 <div className={classes['track-image']}><img src={props.image} /></div>
                 <div className={classes['track-info']} >
                     <div>
@@ -50,7 +50,7 @@ export default function Track(props) {
                     </div>
                     <div>{props.length}</div>
                 </div>
-                <audio ref={audioRef} src={props.preview}></audio>
+                {/* <audio ref={audioRef} src={props.preview}></audio> */}
             </div>
         </Card >
     )
