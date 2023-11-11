@@ -11,10 +11,10 @@
     "src/components/Artists/ColorChange.module.css": true,
     "src/components/CurrentlyPlaying/CurrentlyPlaying.module.css": true,
     "src/components/CurrentlyPlaying/CurrentlyPlaying.module.css.map": true,
-    "src/components/layout/Layout.module.css": true,
-    "src/components/layout/Layout.module.css.map": true,
-    "src/components/layout/Nav.module.css": true,
-    "src/components/layout/Nav.module.css.map": true,
+    "src/components/Layout/Layout.module.css": true,
+    "src/components/Layout/Layout.module.css.map": true,
+    "src/components/Layout/Nav.module.css": true,
+    "src/components/Layout/Nav.module.css.map": true,
     "src/components/Tracks/Track.module.css": true,
     "src/components/Tracks/TrackList.module.css": true,
     "src/components/Tracks/TrackList.module.css.map": true,
@@ -30,7 +30,7 @@
     "src/components/ui/Section.module.css.map": true,
     "src/components/ui/SectionWrapper.module.css": true,
     "src/components/ui/SectionWrapper.module.css.map": true,
-    "src/components/layout/Footer.module.css": true,
-    "src/components/layout/Footer.module.css.map": true
+    "src/components/Layout/Footer.module.css": true,
+    "src/components/Layout/Footer.module.css.map": true
   }
 }

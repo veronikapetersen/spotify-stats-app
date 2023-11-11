@@ -1,5 +1,5 @@
 // import Roboto from "@/utils/fonts";
-import Layout from "@/components/layout/Layout";
+import Layout from "@/components/Layout/Layout";
 import Section from "@/components/ui/Section";
 import SectionWrapper from "@/components/ui/SectionWrapper";
 import ArtistList from "@/components/Artists/ArtistList";
