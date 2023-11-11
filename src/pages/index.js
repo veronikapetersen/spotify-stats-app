@@ -4,20 +4,17 @@ import Section from "@/components/ui/Section";
 import SectionWrapper from "@/components/ui/SectionWrapper";
 import ArtistList from "@/components/Artists/ArtistList";
 import TrackList from "@/components/Tracks/TrackList";
-import CurrentlyPlaying from "@/components/CurrentlyPlaying/CurrentlyPlaying";
 import ColorChange from "@/components/Artists/ColorChange";
 import Hero from "@/components/ui/Hero";
-import ArtistListNew from "@/components/Artists/ArtistListNew";
 import Quote from "@/components/ui/Quote";
+import SpotlightTrack from "@/components/Spotlight/SpotlightTrack";
 
 export default function HomePage() {
   return (
 
     <>
       <Layout>
-
         <Hero />
-
         <ColorChange
           color="#AD96DC"
           start="top 30%"
@@ -26,7 +23,7 @@ export default function HomePage() {
           markers={false}>
           <Section>
             <SectionWrapper>
-              <CurrentlyPlaying />
+              <SpotlightTrack />
             </SectionWrapper>
           </Section>
         </ColorChange>
@@ -56,8 +53,7 @@ export default function HomePage() {
             <TrackList />
           </SectionWrapper>
         </Section>
-
-        {/* <ArtistListNew></ArtistListNew> */}
+        
       </Layout>
     </>
   );

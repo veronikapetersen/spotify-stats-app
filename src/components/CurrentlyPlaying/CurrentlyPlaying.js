@@ -1,5 +1,4 @@
 import classes from "./CurrentlyPlaying.module.scss";
-
 import { useEffect, useState } from "react";
 
 export default function CurrentlyPlaying() {
@@ -17,6 +16,10 @@ export default function CurrentlyPlaying() {
             });
     }, []);
 
+    console.log("currently ", data);
+    if (data.isPlaying === false) {
+        console.log("nothing playing")
+    }
 
     return (
         <div className={classes.doublesection}>
@@ -35,7 +38,7 @@ export default function CurrentlyPlaying() {
                     {/* <p>&#x1F3A7;Track: {data.title}</p> */}
                     <p className={classes['track-title']}>{data.title}</p>
                     <p className={classes['track-artist']}>by {data.artist}</p>
-                    <p className={classes['track-album']}>Album: {data.album}</p>
+                    <p className={classes['track-album']}>Album: {data.album_name}</p>
                 </div>
             </div>
         </div>

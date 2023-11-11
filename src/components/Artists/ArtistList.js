@@ -13,7 +13,6 @@ export default function ArtistList() {
         const swiperContainer = swiperElRef.current;
         const params = {
             pagination: true,
-            // navigation: true,
             mousewheel: true,
             slidesPerView: 1,
             injectStyles: [
@@ -45,11 +44,10 @@ export default function ArtistList() {
 
     const [data, setData] = useState([]);
     useEffect(() => {
-        // Fetch data from your API endpoint
         fetch("/api/stats/artists")
             .then((response) => response.json())
             .then((result) => {
-                setData(result); // Store the fetched data in state
+                setData(result);
             })
             .catch((error) => {
                 console.error("Error fetching data:", error);
@@ -68,11 +66,10 @@ export default function ArtistList() {
                 {data.map((artist) => (
                     <swiper-slide key={artist.id}>
                         <Artist
+                            rank={artist.rank}
                             name={artist.name}
-                            followers={artist.followers}
                             image={artist.coverImage.url}
                             genres={artist.genres}
-                            popularity={artist.popularity}
                             url={artist.url}
                         />
                     </swiper-slide>

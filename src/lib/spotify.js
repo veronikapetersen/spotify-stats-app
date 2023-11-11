@@ -28,7 +28,6 @@ export const topTracks = async () => {
     });
 };
 
-
 export const topArtists = async () => {
     const { access_token } = await getAccessToken();
 
@@ -48,3 +47,13 @@ export const currentlyPlayingSong = async () => {
         },
     });
 };
+
+export const recentlyPlayed = async () => {
+    const { access_token } = await getAccessToken();
+
+    return fetch("https://api.spotify.com/v1/me/player/recently-played", {
+        headers: {
+            Authorization: `Bearer ${access_token}`,
+        }
+    });
+}

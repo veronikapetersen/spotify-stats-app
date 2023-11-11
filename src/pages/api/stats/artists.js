@@ -4,17 +4,14 @@ export default async function handler(req, res) {
   const response = await topArtists();
   const { items } = await response.json();
 
-  const artists = items.slice(0, 10).map((artist) => ({
+  const artists = items.slice(0, 10).map((artist, index) => ({
+    rank: index + 1,
     name: artist.name,
     url: artist.external_urls.spotify,
     coverImage: artist.images[1],
-    followers: artist.followers.total,
-    popularity: artist.popularity,
     genres: artist.genres,
     id: artist.id
   }));
-
-  //  console.log(artists);
 
   res.setHeader(
     "Cache-Control",

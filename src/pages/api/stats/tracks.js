@@ -4,8 +4,6 @@ export default async function handler(req, res) {
     const response = await topTracks();
     const { items } = await response.json();
 
-    console.log(items.slice(0, 2));
-
     const tracks = items.slice(0, 5).map((track) => ({
         title: track.name,
         coverImage: track.album.images[1],
