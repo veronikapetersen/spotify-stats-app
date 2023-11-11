@@ -8,7 +8,6 @@
 .footer {
     background-color: black;
     color: white;
-    font-size: 3rem;
     height: 200px;
     position: fixed;
     bottom: 0;
@@ -18,4 +17,45 @@
     justify-content: center;
     align-items: center;
     z-index: 10;
+
+    .footer-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.contact-info a {
+    color: #fff;
+    text-decoration: none;
+    margin-right: 20px;
+    position: relative;
+    font-size: 16px;
+
+    &::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        transform: scaleX(0);
+        height: 2px;
+        bottom: -8px;
+        left: 0;
+        background-color: white;
+        transform-origin: bottom right;
+        transition: transform 0.25s ease-out;
+    }
+
+    &:hover {
+        cursor: pointer;
+
+        &::after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+        }
+    }
+}
+
+.copyright-info {
+    margin-top: 20px;
+    color: #818181;
 }

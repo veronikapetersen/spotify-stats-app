@@ -9,8 +9,16 @@
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
+.artist-rank {
+  font-size: 20px;
+  font-weight: bold;
+  color: #AD96DC;
+}
+
 .artist-name {
   font-size: 42px;
+  font-weight: bold;
+  margin-top: 1rem;
   margin-bottom: 3rem;
   display: flex;
 }
@@ -37,7 +45,7 @@
   position: absolute;
   width: 100%;
   transform: scaleX(0);
-  height: 2px;
+  height: 4px;
   bottom: -10px;
   left: 0;
   background-color: #000;
