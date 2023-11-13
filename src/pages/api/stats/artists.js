@@ -10,7 +10,8 @@ export default async function handler(req, res) {
     url: artist.external_urls.spotify,
     coverImage: artist.images[1],
     genres: artist.genres,
-    id: artist.id
+    id: artist.id,
+    popularity: artist.popularity
   }));
 
   res.setHeader(

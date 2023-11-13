@@ -8,7 +8,7 @@ import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 
-export default function Quote() {
+export default function Quote(props) {
     const titleRef = useRef(null);
 
     useEffect(() => {
@@ -22,7 +22,7 @@ export default function Quote() {
                     backgroundPositionX: 0,
                     scrollTrigger: {
                         trigger: target,
-                        start: 'top 40%',
+                        start: 'top 55%',
                         end: 'bottom 20%',
                         toggleActions: 'play none none reverse',
                         markers: false
@@ -33,14 +33,17 @@ export default function Quote() {
     }, []);
 
     return (
-        <div className={classes.content}>
+        <div className={classes.quote}>
             <div ref={titleRef}>
-                <div className={classes.element}>My house is buried in the deepest recess of the forest</div>
-                <div className={classes.element}>Every year, ivy vines grow longer than the year before.</div>
-                <div className={classes.element}>Undisturbed by the affairs of the world I live at ease,</div>
-                <div className={classes.element}>Woodmen's singing rarely reaching me through the trees.</div>
+                <div className={classes.element}>Did you know that your favourite artist </div>
+                <div className={classes.element}><b>{props.name}</b> is ranked at <b>#{props.popularity}</b></div>
+                <div className={classes.element}>in popularity* on Spotify?</div>
+                <button className={classes['confetti-btn']}>Wow!!</button>
+            </div>
+            <div className={classes.smaller}>
+                <div>* The popularity of the artist is a value between 0 and 100, with 100 being the most popular. </div>
+                <div>The artist's popularity is calculated from the popularity of all the artist's tracks.</div>
             </div>
         </div>
     );
 };
-

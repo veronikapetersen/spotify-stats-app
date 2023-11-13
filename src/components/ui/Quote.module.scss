@@ -1,21 +1,44 @@
-.content {
-    display: flex;
-    flex-direction: column;
-    border: 1px solid black;
-    overflow-x: hidden;
-    background-color: #161616;
-}
+.quote {
+    padding-top: 240px;
+    padding-bottom: 160px;
 
-.element {
-    background: linear-gradient(to right,
-            rgb(255, 255, 255) 50%,
-            rgb(37, 37, 37) 50%);
-    background-size: 200% 100%;
-    background-position-x: 100%;
-    color: transparent;
-    background-clip: text;
-    -webkit-background-clip: text;
-    margin-left: 50px;
-    line-height: 1.6;
-    font-size: 4rem;
+    .element {
+        background: linear-gradient(to right, rgb(255, 255, 255) 50%, rgb(37, 37, 37) 50%);
+        background-size: 200% 100%;
+        background-position-x: 100%;
+        color: transparent;
+        background-clip: text;
+        -webkit-background-clip: text;
+        margin-left: 50px;
+        line-height: 1.6;
+        font-size: 4rem;
+        text-align: center;
+    }
+
+    .smaller {
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    .confetti-btn {
+        display: flex;
+        margin: 40px auto;
+        padding: 10px 30px;
+        border: 2px solid #fff;
+        border-radius: 20px;
+        color: #fff;
+        font-size: 1.2rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+        background: transparent;
+        outline: none;
+
+        &:hover {
+            background: #fff;
+            color: #000;
+        }
+    }
 }

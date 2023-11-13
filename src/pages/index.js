@@ -41,11 +41,11 @@ export default function HomePage() {
           </Section>
         </ColorChange>
 
-        <Section>
+        {/* <Section>
           <SectionWrapper>
             <Quote />
           </SectionWrapper>
-        </Section>
+        </Section> */}
 
         <Section
           rounded={true}>
@@ -53,7 +53,7 @@ export default function HomePage() {
             <TrackList />
           </SectionWrapper>
         </Section>
-        
+
       </Layout>
     </>
   );

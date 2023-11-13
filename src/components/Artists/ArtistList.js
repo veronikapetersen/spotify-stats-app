@@ -3,11 +3,14 @@ import Artist from "./Artist";
 import { useEffect, useState } from "react";
 import { useRef } from 'react';
 import { register } from 'swiper/element/bundle';
+import Quote from "../ui/Quote";
 register();
 
 export default function ArtistList() {
 
     const swiperElRef = useRef(null);
+    const [data, setData] = useState([]);
+    const [topArtist, setTopArtist] = useState([]);
 
     useEffect(() => {
         const swiperContainer = swiperElRef.current;
@@ -42,12 +45,13 @@ export default function ArtistList() {
         swiperContainer.initialize();
     }, []);
 
-    const [data, setData] = useState([]);
+
     useEffect(() => {
         fetch("/api/stats/artists")
             .then((response) => response.json())
             .then((result) => {
                 setData(result);
+                setTopArtist(result[0]);
             })
             .catch((error) => {
                 console.error("Error fetching data:", error);
@@ -76,6 +80,9 @@ export default function ArtistList() {
                 ))
                 }
             </swiper-container>
+
+            <Quote name={topArtist.name} popularity={topArtist.popularity} />
+
         </>
     )
 }
