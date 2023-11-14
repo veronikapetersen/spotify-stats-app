@@ -19,26 +19,4 @@
         font-size: 1rem;
         text-align: center;
     }
-
-    .confetti-btn {
-        display: flex;
-        margin: 40px auto;
-        padding: 10px 30px;
-        border: 2px solid #fff;
-        border-radius: 20px;
-        color: #fff;
-        font-size: 1.2rem;
-        font-weight: 600;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        cursor: pointer;
-        transition: all 0.3s ease-in-out;
-        background: transparent;
-        outline: none;
-
-        &:hover {
-            background: #fff;
-            color: #000;
-        }
-    }
 }
