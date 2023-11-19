@@ -1,3 +1,6 @@
+import { getSession } from "next-auth/react";
+
+
 // import Roboto from "@/utils/fonts";
 import Layout from "@/components/Layout/Layout";
 import Section from "@/components/ui/Section";
@@ -9,9 +12,8 @@ import Hero from "@/components/ui/Hero";
 import Quote from "@/components/ui/Quote";
 import SpotlightTrack from "@/components/Spotlight/SpotlightTrack";
 
-export default function HomePage() {
+export default function HomePage({ session }) {
   return (
-
     <>
       <Layout>
         <Hero />
@@ -57,4 +59,21 @@ export default function HomePage() {
       </Layout>
     </>
   );
+}
+
+export async function getServerSideProps(context) {
+
+  context.res.setHeader('Cache-Control', 'no-store, max-age=0');
+  const session = await getSession(context);
+
+  if (!session) {
+    return {
+      redirect: {
+        destination: '/login',
+        permanent: false,
+      },
+    };
+  }
+
+  return { props: { session } };
 }

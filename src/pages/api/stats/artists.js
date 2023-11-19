@@ -1,8 +1,8 @@
 import { topArtists } from "../../../lib/spotify";
 
 export default async function handler(req, res) {
-  const response = await topArtists();
-  const { items } = await response.json();
+  const response = await topArtists(req);
+  const items = response.items;
 
   const artists = items.slice(0, 10).map((artist, index) => ({
     rank: index + 1,

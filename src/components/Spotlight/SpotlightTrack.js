@@ -9,7 +9,10 @@ export default function SpotlightTrack() {
         const fetchData = async () => {
             try {
                 const response = await fetch("/api/now-playing");
+                console.log(response);
                 const result = await response.json();
+
+                console.log("result", result);
 
                 if (result.isPlaying) {
                     console.log("currently playing:", result);

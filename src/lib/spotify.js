@@ -1,59 +1,38 @@
-const getAccessToken = async () => {
-    const refresh_token = process.env.SPOTIFY_REFRESH_TOKEN;
+import { getSession } from 'next-auth/react';
 
-    const response = await fetch("https://accounts.spotify.com/api/token", {
-        method: "POST",
+const fetchFromSpotify = async (url, req) => {
+    const session = await getSession({ req });
+    const accessToken = session?.user?.accessToken;
+
+    if (!accessToken) {
+        throw new Error("User is not authenticated or token has expired");
+    }
+
+    const response = await fetch(url, {
         headers: {
-            Authorization: `Basic ${Buffer.from(
-                `${process.env.SPOTIFY_CLIENT_ID}:${process.env.SPOTIFY_CLIENT_SECRET}`
-            ).toString("base64")}`,
-            "Content-Type": "application/x-www-form-urlencoded",
+            Authorization: `Bearer ${accessToken}`,
         },
-        body: new URLSearchParams({
-            grant_type: "refresh_token",
-            refresh_token,
-        }),
     });
+
+    if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+    }
 
     return response.json();
 };
 
-export const topTracks = async () => {
-    const { access_token } = await getAccessToken();
-
-    return fetch("https://api.spotify.com/v1/me/top/tracks", {
-        headers: {
-            Authorization: `Bearer ${access_token}`,
-        },
-    });
+export const topTracks = async (req) => {
+    return fetchFromSpotify("https://api.spotify.com/v1/me/top/tracks", req);
 };
 
-export const topArtists = async () => {
-    const { access_token } = await getAccessToken();
-
-    return fetch("https://api.spotify.com/v1/me/top/artists", {
-        headers: {
-            Authorization: `Bearer ${access_token}`,
-        },
-    });
+export const topArtists = async (req) => {
+    return fetchFromSpotify("https://api.spotify.com/v1/me/top/artists", req);
 };
 
-export const currentlyPlayingSong = async () => {
-    const { access_token } = await getAccessToken();
-
-    return fetch("https://api.spotify.com/v1/me/player/currently-playing", {
-        headers: {
-            Authorization: `Bearer ${access_token}`,
-        },
-    });
+export const currentlyPlayingSong = async (req) => {
+    return fetchFromSpotify("https://api.spotify.com/v1/me/player/currently-playing", req);
 };
 
-export const recentlyPlayed = async () => {
-    const { access_token } = await getAccessToken();
-
-    return fetch("https://api.spotify.com/v1/me/player/recently-played", {
-        headers: {
-            Authorization: `Bearer ${access_token}`,
-        }
-    });
-}
+export const recentlyPlayed = async (req) => {
+    return fetchFromSpotify("https://api.spotify.com/v1/me/player/recently-played", req);
+};
