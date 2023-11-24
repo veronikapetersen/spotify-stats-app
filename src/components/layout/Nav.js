@@ -1,9 +1,8 @@
-import Link from 'next/link';
 import classes from './Nav.module.scss';
 
 import { signOut } from 'next-auth/react';
 
-function Nav() {
+export default function Nav() {
 
     const handleLogout = () => {
         signOut({ callbackUrl: '/' });
@@ -19,12 +18,9 @@ function Nav() {
         <nav>
             <ul>
                 <li>
-                    {/* <Link href='/'>	Nav Link</Link> */}
-                    <button onClick={handleLogout}>Log out</button>
+                    <button className={classes['logout-btn']} onClick={handleLogout}>Log out</button>
                 </li>
             </ul>
         </nav>
     </header>)
 }
-
-export default Nav;
