@@ -1,5 +1,30 @@
 .image {
     border-radius: 50%;
-    width: 380px;
-    height: 380px;
+    width: 150px;
+    height: 150px;
+
+    @media (min-width: 576px) {
+        width: 180px;
+        height: 180px;
+    }
+
+    @media (min-width: 768px) {
+        width: 200px;
+        height: 200px;
+    }
+
+    @media (min-width: 992px) {
+        width: 250px;
+        height: 250px;
+    }
+
+    @media (min-width: 1200px) {
+        width: 300px;
+        height: 300px;
+    }
+
+    @media (min-width: 1400px) {
+        width: 380px;
+        height: 380px;
+    }
 }

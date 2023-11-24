@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { useRef } from 'react';
 import { register } from 'swiper/element/bundle';
 import Quote from "../ui/Quote";
+import Heading2 from "../ui/Heading2";
 register();
 
 export default function ArtistList() {
@@ -60,8 +61,8 @@ export default function ArtistList() {
 
     return (
         <>
-            <h2 className={classes.h2}>Top Artists</h2>
-            <p className={classes.text}>Here are my top artists based on the number of times I've listened to their songs.</p>
+            <Heading2>Top Artists</Heading2>
+            <p className={classes.text}>Here are your top artists based on the number of times you've listened to their songs.</p>
 
             <swiper-container
                 ref={swiperElRef}

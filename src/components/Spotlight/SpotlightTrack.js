@@ -1,6 +1,8 @@
 import classes from './SpotlightTrack.module.scss';
 import { useEffect, useState } from 'react';
 
+import Heading2 from '../ui/Heading2';
+
 export default function SpotlightTrack() {
     const [data, setData] = useState([]);
     const [isPlaying, setIsPlaying] = useState(false);
@@ -39,7 +41,7 @@ export default function SpotlightTrack() {
 
                 <div className={classes.right}>
                     <div>
-                        <h2 className={classes.h2}>{isPlaying ? "Currently Playing" : "Recently Played"}</h2>
+                        <Heading2>{isPlaying ? "Currently Playing" : "Recently Played"}</Heading2>
                     </div>
                     <div className={classes['track-info']}>
                         <p className={classes['track-title']}>{data.title}</p>

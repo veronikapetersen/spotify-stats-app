@@ -3,6 +3,8 @@ import Track from './Track';
 
 import { useEffect, useState } from "react";
 
+import Heading2 from '../ui/Heading2';
+
 export default function TrackList() {
 
 
@@ -20,7 +22,7 @@ export default function TrackList() {
 
     return (
         <>
-            <h2 className={classes.h2}>Top Tracks</h2>
+            <Heading2>Top Tracks</Heading2>
             {/* <p className={classes.text}>Here are my top songs based on the number of times I've listened to them.</p> */}
             <div className={classes.text}>
                 <p>Hover the track to listen to the audio snippet.</p>
