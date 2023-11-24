@@ -6,7 +6,7 @@ import { signOut } from 'next-auth/react';
 function Nav() {
 
     const handleLogout = () => {
-        signOut({ callbackUrl: '/login' });
+        signOut({ callbackUrl: '/' });
     }
 
     return (<header className={classes.header}>
