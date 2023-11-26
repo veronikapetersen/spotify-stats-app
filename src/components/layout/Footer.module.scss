@@ -1,5 +1,5 @@
 .placeholder {
-    height: 200px;
+    height: 300px;
     position: relative;
     z-index: 1;
     background-color: black;
@@ -8,7 +8,7 @@
 .footer {
     background-color: black;
     color: white;
-    height: 200px;
+    height: 300px;
     position: fixed;
     bottom: 0;
     width: 100%;
@@ -18,44 +18,68 @@
     align-items: center;
     z-index: 10;
 
-    .footer-content {
+    .contact {
+        width: 70vw;
+        max-width: 800px;
         display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-}
+        flex-direction: column;
+        font-size: 14px;
 
-.contact-info a {
-    color: #fff;
-    text-decoration: none;
-    margin-right: 20px;
-    position: relative;
-    font-size: 16px;
+        @media (min-width: 768px) {
+            flex-direction: row;
+            justify-content: space-between;
+            font-size: 16px;
+        }
 
-    &::after {
-        content: '';
-        position: absolute;
-        width: 100%;
-        transform: scaleX(0);
-        height: 2px;
-        bottom: -8px;
-        left: 0;
-        background-color: white;
-        transform-origin: bottom right;
-        transition: transform 0.25s ease-out;
-    }
+        &>div {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
 
-    &:hover {
-        cursor: pointer;
+            @media (min-width: 768px) {
+                align-items: flex-start;
+            }
+        }
 
-        &::after {
-            transform: scaleX(1);
-            transform-origin: bottom left;
+        a {
+            color: #fff;
+            width: fit-content;
+            text-decoration: none;
+            position: relative;
+            display: flex;
+            justify-content: flex-end;
+            margin-bottom: 8px;
+
+            @media (min-width: 768px) {
+                justify-content: flex-start;
+                margin-bottom: 16px;
+            }
+
+            &::after {
+                content: '';
+                position: absolute;
+                width: 100%;
+                transform: scaleX(0);
+                height: 2px;
+                bottom: -8px;
+                left: 0;
+                background-color: white;
+                transform-origin: bottom right;
+                transition: transform 0.25s ease-out;
+            }
+
+            &:hover {
+                cursor: pointer;
+
+                &::after {
+                    transform: scaleX(1);
+                    transform-origin: bottom left;
+                }
+            }
         }
     }
-}
 
-.copyright-info {
-    margin-top: 20px;
-    color: #818181;
+    .copyright {
+        color: #818181;
+    }
 }

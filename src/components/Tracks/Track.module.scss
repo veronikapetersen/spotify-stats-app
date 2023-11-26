@@ -1,50 +1,125 @@
 .track {
     display: flex;
-    border: 1px solid black;
-    margin-bottom: 40px;
-    color: rgb(128, 128, 128);
-}
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
 
-.track-image {
-    display: flex;
-    margin-right: 20px;
-
-    img {
-        width: 80px;
-        height: 80px;
+    &:hover {
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+        cursor: pointer;
     }
-}
 
-.track-info {
-    width: 100%;
-    display: grid;
-    grid-template-columns: 4fr 4fr 1fr;
-    align-content: center;
+    color: rgb(128, 128, 128);
 
-    &>div {
+    margin-bottom: 26px;
+
+    @media (min-width: 768px) {
+        margin-bottom: 30px;
+    }
+
+    @media (min-width: 992px) {
+        margin-bottom: 36px;
+    }
+
+    @media (min-width: 1200px) {
+        margin-bottom: 40px;
+    }
+
+
+    &__image {
+        display: flex;
+        margin-right: 20px;
+
+        img {
+            width: 48px;
+            height: 48px;
+
+            @media (min-width: 576px) {
+                width: 52px;
+                height: 52px;
+            }
+
+            @media (min-width: 768px) {
+                width: 60px;
+                height: 60px;
+            }
+
+            @media (min-width: 992px) {
+                width: 74px;
+                height: 74px;
+            }
+
+            @media (min-width: 1200px) {
+                width: 80px;
+                height: 80px;
+            }
+        }
+    }
+
+    &__info {
         display: grid;
         align-content: center;
+
+        @media (min-width: 768px) {
+            width: 100%;
+            grid-template-columns: 4fr 4fr 1fr;
+
+            &>div {
+                display: grid;
+                align-content: center;
+            }
+        }
+
+        &__extra {
+            display: none;
+
+            @media (min-width: 768px) {
+                display: block;
+                font-size: 14px;
+            }
+
+            @media (min-width: 1200px) {
+                font-size: 16px;
+            }
+
+            .album {
+                margin-right: 5px;
+            }
+        }
+    }
+
+    .track-title {
+        margin-bottom: 5px;
+        color: black;
+        font-weight: bold;
+        font-size: 16px;
+
+        @media (min-width: 1200px) {
+            font-size: 18px;
+        }
+    }
+
+    .track-artist {
+        display: flex;
+        align-items: flex-end;
+        font-size: 14px;
+
+        @media (min-width: 1200px) {
+            font-size: 16px;
+        }
+
+        svg {
+            width: 20px;
+            height: 20px;
+            margin-right: 2px;
+            fill: rgb(128, 128, 128) !important;
+        }
     }
 }
 
-.track-title {
-    margin-bottom: 5px;
-    color: black;
-    font-weight: bold;
-}
 
-.track-artist {
-    display: flex;
-    align-items: center;
 
-    svg {
-        width: 20px;
-        height: 20px;
-        margin-right: 2px;
-        fill: rgb(128, 128, 128) !important;
-        color: rgb(128, 128, 128) !important;
-    }
-}
+
+
+
 
 // .circlecursor {
 //     position: fixed;

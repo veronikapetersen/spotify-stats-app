@@ -36,8 +36,11 @@ export default function Track(props) {
                 >
                     playing audio
                 </div> */}
-                <div className={classes['track-image']}><img src={props.image} /></div>
-                <div className={classes['track-info']} >
+
+
+                <div className={classes['track__image']}><img src={props.image} /></div>
+
+                <div className={classes['track__info']} >
                     <div>
                         <div className={classes['track-title']}>{props.title}</div>
                         <div className={classes['track-artist']}>
@@ -45,11 +48,15 @@ export default function Track(props) {
                             {props.artist}
                         </div>
                     </div>
-                    <div>
-                        {props.album_type === "SINGLE" ? <div><i>single</i></div> : <div>{props.album_name}</div>}
+
+                    <div className={classes['track__info__extra']}>
+                        {props.album_type === "SINGLE" ? <div><i>single</i></div> : <div className={classes.album}>{props.album_name}</div>}
                     </div>
-                    <div>{props.length}</div>
+
+                    <div className={classes['track__info__extra']}>{props.length}</div>
+
                 </div>
+
                 {/* <audio ref={audioRef} src={props.preview}></audio> */}
             </div>
         </Card >

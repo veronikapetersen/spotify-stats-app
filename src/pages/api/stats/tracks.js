@@ -10,7 +10,9 @@ export default async function handler(req, res) {
             title: track.name,
             coverImage: track.album.images[1],
             preview: track.preview_url,
-            artist: track.artists.map((_artist) => _artist.name).join(", "),
+            artist: track.artists.length > 2
+                ? track.artists.slice(0, 2).map((_artist) => _artist.name).join(", ") + "..."
+                : track.artists.map((_artist) => _artist.name).join(", "),
             url: track.external_urls.spotify,
             length: `${Math.floor(track.duration_ms / 60000)}:${((track.duration_ms % 60000) / 1000).toFixed(0)}`,
             explicit: track.explicit,

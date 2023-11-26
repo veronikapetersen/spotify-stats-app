@@ -2,11 +2,14 @@
     // border: 1px solid black;
 
     .doublesection {
-        display: grid;
-        grid-template-rows: 1fr 1fr;
+        // display: grid;
+        // grid-template-rows: 1fr 1fr;
+        display: flex;
+        flex-direction: column-reverse;
 
         @media (min-width: 768px) {
-            grid-template-rows: none;
+            display: grid;
+            // grid-template-rows: none;
             grid-template-columns: 1fr 1fr;
         }
     }
