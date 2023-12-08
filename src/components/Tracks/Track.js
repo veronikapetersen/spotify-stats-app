@@ -1,44 +1,44 @@
-import { useState, useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import classes from './Track.module.scss';
 import Card from '@/components/ui/Card';
-import Image from '@/components/ui/Img';
 
 export default function Track(props) {
 
-    // const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
-    // const [hovered, setHovered] = useState(false);
-
-    // const handleMouseMove = (e) => {
-    //     setCursorPosition({ x: e.clientX, y: e.clientY });
-    // }
-
     const audioRef = useRef(null);
-    const handleMouseEnter = () => {
-        // setHovered(true);
-        // audioRef.current.play();
-    };
-    const handleMouseLeave = () => {
-        // setHovered(false);
-        // audioRef.current.pause();
-        // audioRef.current.currentTime = 0;
-    };
+
+    useEffect(() => {
+        if (props.isPlaying) {
+            audioRef.current.play();
+        } else {
+            audioRef.current.pause();
+            audioRef.current.currentTime = 0;
+        }
+
+        const audio = audioRef.current;
+        const handleEnd = () => {
+            if (props.onFinish) {
+                props.onFinish();
+            }
+        };
+
+        audio.addEventListener('ended', handleEnd);
+
+        return () => audio.removeEventListener('ended', handleEnd);
+
+    }, [props.isPlaying, props.onFinish]);
 
     return (
         <Card>
-            <div className={classes.track}
-                // onMouseMove={handleMouseMove}
-                onMouseEnter={handleMouseEnter}
-                onMouseLeave={handleMouseLeave}
-            >
-                {/* <div
-                    className={`${classes.circlecursor} ${hovered ? classes.show : ''}`}
-                    style={{ left: `${cursorPosition.x}px`, top: `${cursorPosition.y}px` }}
-                >
-                    playing audio
-                </div> */}
+            <div className={classes.track}>
+                <div>
+                    <button onClick={props.onPlay} className={classes['play-button']}>
+                        {props.isPlaying ? (<svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M520-200v-560h240v560H520Zm-320 0v-560h240v560H200Zm400-80h80v-400h-80v400Zm-320 0h80v-400h-80v400Zm0-400v400-400Zm320 0v400-400Z" /></svg>) : (<svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M320-200v-560l440 280-440 280Zm80-280Zm0 134 210-134-210-134v268Z" /></svg>)}
+                    </button>
+                </div>
 
-
-                <div className={classes['track__image']}><img src={props.image} /></div>
+                <div className={classes['track__image']}>
+                    <img src={props.image} alt='album cover' />
+                </div>
 
                 <div className={classes['track__info']} >
                     <div>
@@ -57,7 +57,7 @@ export default function Track(props) {
 
                 </div>
 
-                {/* <audio ref={audioRef} src={props.preview}></audio> */}
+                <audio ref={audioRef} src={props.preview}></audio>
             </div>
         </Card >
     )

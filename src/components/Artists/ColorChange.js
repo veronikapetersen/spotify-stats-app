@@ -22,8 +22,6 @@ const ColorChange = (props) => {
                 duration: 0.7,
                 scrollTrigger: {
                     trigger: section,
-                    // toggleActions: "play reverse play reverse",
-                    // toggleActions: "none play none reverse",
                     toggleActions: props.toggleActions,
                     start: props.start,
                     end: props.end,

@@ -10,7 +10,6 @@ export default function Nav() {
 
     return (<header className={classes.header}>
         <div className={classes.logo}>
-            {/* <div className={classes['logo-icon']}>&#x1F3A7;</div> */}
             <div className={classes['logo-icon']}>&#129705;</div>
             <div className={classes['logo-text']}>Spotify Stats</div>
         </div>

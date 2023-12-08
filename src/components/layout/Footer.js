@@ -10,12 +10,12 @@ export default function Footer() {
 
                 <div className={classes['contact']}>
                     <div>
-                        <Link href="https://www.yourportfolio.com" target="_blank" rel="noopener noreferrer">Portfolio</Link>
-                        <Link href="https://www.linkedin.com/in/yourname" target="_blank" rel="noopener noreferrer">LinkedIn</Link>
+                        <Link href="https://veronikapetersen.dk/" target="_blank" rel="noopener noreferrer">Portfolio</Link>
+                        <Link href="https://www.linkedin.com/in/veronikapetersen/" target="_blank" rel="noopener noreferrer">LinkedIn</Link>
                     </div>
                     <div>
-                        <Link href="mailto:your.email@example.com">Email</Link>
-                        <Link href="https://github.com/yourusername/your-app-repo" target="_blank" rel="noopener noreferrer">GitHub</Link>
+                        <Link href="mailto:msveronika.petersen@gmail.com">Email</Link>
+                        <Link href="https://github.com/veronikapetersen" target="_blank" rel="noopener noreferrer">GitHub</Link>
                     </div>
                     <div>
                         <Link href="https://www.buymeacoffee.com/veronikaaa">Buy me a coffee</Link>

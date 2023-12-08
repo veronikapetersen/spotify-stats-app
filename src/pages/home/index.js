@@ -1,7 +1,5 @@
 import { getSession } from "next-auth/react";
 
-
-// import Roboto from "@/utils/fonts";
 import Layout from "@/components/Layout/Layout";
 import Section from "@/components/ui/Section";
 import SectionWrapper from "@/components/ui/SectionWrapper";

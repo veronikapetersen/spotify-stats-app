@@ -1,10 +1,10 @@
 .track {
     display: flex;
     box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+    padding: 8px 0;
 
     &:hover {
         box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-        cursor: pointer;
     }
 
     color: rgb(128, 128, 128);
@@ -22,7 +22,6 @@
     @media (min-width: 1200px) {
         margin-bottom: 40px;
     }
-
 
     &__image {
         display: flex;
@@ -50,6 +49,38 @@
             @media (min-width: 1200px) {
                 width: 80px;
                 height: 80px;
+            }
+        }
+    }
+
+    button.play-button {
+        background: none;
+        border: none;
+        padding: 0 20px;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        svg {
+            height: 20px;
+            width: 20px;
+            fill: rgb(128, 128, 128) !important;
+
+            @media (min-width: 768px) {
+                height: 30px;
+                width: 30px;
+            }
+        }
+
+        &:hover {
+            cursor: pointer;
+
+            svg {
+                fill: black !important;
+                scale: 1.2;
+                transition: all 0.2s ease-in-out;
             }
         }
     }
@@ -90,7 +121,8 @@
         margin-bottom: 5px;
         color: black;
         font-weight: bold;
-        font-size: 16px;
+        font-size: 15px;
+        padding-right: 12px;
 
         @media (min-width: 1200px) {
             font-size: 18px;
@@ -100,7 +132,7 @@
     .track-artist {
         display: flex;
         align-items: flex-end;
-        font-size: 14px;
+        font-size: 13px;
 
         @media (min-width: 1200px) {
             font-size: 16px;
@@ -114,27 +146,3 @@
         }
     }
 }
-
-
-
-
-
-
-
-// .circlecursor {
-//     position: fixed;
-//     background-color: black;
-//     color: white;
-//     padding: 5px 10px;
-//     text-align: center;
-//     font-size: 16px;
-//     display: none;
-
-//     &.show {
-//         display: block;
-//     }
-// }
-
-// .track:hover .circlecursor {
-//     display: block;
-// }

@@ -9,6 +9,8 @@ export default function TrackList() {
 
 
     const [data, setData] = useState([]);
+    const [playingTrackId, setPlayingTrackId] = useState(null);
+
     useEffect(() => {
         fetch("/api/stats/tracks")
             .then((response) => response.json())
@@ -20,13 +22,23 @@ export default function TrackList() {
             });
     }, []);
 
+    const playTrack = (trackId) => {
+        console.log("playTrack", trackId)
+        if (playingTrackId === trackId) {
+            setPlayingTrackId(null);
+        } else {
+            setPlayingTrackId(trackId);
+        }
+    };
+
+    const handleTrackEnd = () => {
+        setPlayingTrackId(null);
+    }
+
     return (
         <>
             <Heading2>Top Tracks</Heading2>
-            {/* <p className={classes.text}>Here are my top songs based on the number of times I've listened to them.</p> */}
-            {/* <div className={classes.text}>
-                <p>Hover the track to listen to the audio snippet.</p>
-            </div> */}
+            <p className={classes.text}>Here are your top songs based on the number of times you've listened to them.</p>
             <br></br>
             <br></br>
             <ul className={classes['track-list']}>
@@ -36,7 +48,7 @@ export default function TrackList() {
                     <div>Length</div>
                 </li>
                 {data.map((track) => (
-                    <li key={track.id}>
+                    <li key={track.track_id}>
                         <Track
                             title={track.title}
                             image={track.coverImage.url}
@@ -46,6 +58,9 @@ export default function TrackList() {
                             album_type={track.album_type}
                             album_name={track.album_name}
                             explicit={track.explicit}
+                            isPlaying={playingTrackId === track.track_id}
+                            onPlay={() => playTrack(track.track_id)}
+                            onFinish={handleTrackEnd}
                         />
                     </li>
                 ))}

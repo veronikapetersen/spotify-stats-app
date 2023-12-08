@@ -15,12 +15,12 @@ export default function Artist(props) {
                         </Link>
                     </div>
                     <div className={classes['artist__genres']}>
-                        {props.genres.slice(0, 2).map(genre => {
-                            return <div className={classes.genre}>{genre}</div>
+                        {props.genres.slice(0, 2).map((genre, i) => {
+                            return <div key={genre[i]} className={classes.genre}>{genre}</div>
                         })}
                     </div>
                 </div>
-                
+
                 <div>
                     <Image src={props.image} />
                 </div>

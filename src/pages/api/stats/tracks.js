@@ -6,6 +6,7 @@ export default async function handler(req, res) {
         const response = await topTracks(req);
         const items = response.items;
 
+
         const tracks = items.slice(0, 5).map((track) => ({
             title: track.name,
             coverImage: track.album.images[1],
@@ -18,7 +19,9 @@ export default async function handler(req, res) {
             explicit: track.explicit,
             album_type: track.album.album_type,
             album_name: track.album.name,
+            track_id: track.id
         }));
+
 
         res.setHeader(
             "Cache-Control",

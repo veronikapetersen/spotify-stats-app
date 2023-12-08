@@ -71,6 +71,7 @@ export default function ArtistList() {
                 {data.map((artist) => (
                     <swiper-slide key={artist.id}>
                         <Artist
+                            key={artist.id}
                             rank={artist.rank}
                             name={artist.name}
                             image={artist.coverImage.url}

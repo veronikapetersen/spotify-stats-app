@@ -35,7 +35,6 @@
             left: -50%;
             z-index: 1;
             transform-origin: bottom right;
-            animation: animate 6s linear infinite;
             height: 370px;
 
             @media (min-width: 992px) {
@@ -46,6 +45,7 @@
         &:before {
             background: linear-gradient(0deg, transparent, transparent, #45f3ff, #45f3ff, #45f3ff);
             width: 3000px;
+            animation: animate 5s linear infinite;
 
             @media (min-width: 992px) {
                 width: 4000px;
@@ -53,6 +53,7 @@
         }
 
         &:after {
+            animation: animate 6s linear infinite;
             background: linear-gradient(0deg, transparent, transparent, #af2896, #af2896, #af2896);
             animation-delay: -3s;
             width: 300px;
