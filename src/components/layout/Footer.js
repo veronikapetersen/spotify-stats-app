@@ -18,7 +18,7 @@ export default function Footer() {
                         <Link href="https://github.com/veronikapetersen" target="_blank" rel="noopener noreferrer">GitHub</Link>
                     </div>
                     <div>
-                        <Link href="https://www.buymeacoffee.com/veronikaaa">Buy me a coffee</Link>
+                        <Link href="https://www.buymeacoffee.com/veronikaaa" target="_blank" rel="noopener noreferrer">Buy me a coffee</Link>
                         <p className={classes.copyright}>&copy; {new Date().getFullYear()} Veronika Petersen</p>
                     </div>
                 </div>
