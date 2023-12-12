@@ -8,18 +8,16 @@ export default function Nav() {
         signOut({ callbackUrl: '/' });
     }
 
-    return (<header className={classes.header}>
-        <div className={classes.logo}>
-            <div className={classes['logo-icon']}>&#129705;</div>
-            <div className={classes['logo-text']}>Spotify Stats</div>
-        </div>
+    return (
+        <header className={classes.header}>
+            <div className={classes.logo}>
+                <div className={classes['logo-icon']}>&#129705;</div>
+                <div className={classes['logo-text']}>Spotify Stats</div>
+            </div>
 
-        <nav>
-            <ul>
-                <li>
-                    <button className={classes['logout-btn']} onClick={handleLogout}>Log out</button>
-                </li>
-            </ul>
-        </nav>
-    </header>)
+
+            <button className={classes['logout-btn']} onClick={handleLogout}>Log out</button>
+
+        </header>
+    )
 }
