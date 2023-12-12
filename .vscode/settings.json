@@ -31,6 +31,14 @@
     "src/components/ui/SectionWrapper.module.css": true,
     "src/components/ui/SectionWrapper.module.css.map": true,
     "src/components/Layout/Footer.module.css": true,
-    "src/components/Layout/Footer.module.css.map": true
+    "src/components/Layout/Footer.module.css.map": true,
+    "src/components/Spotlight/SpotlightTrack.module.css": true,
+    "src/components/Spotlight/SpotlightTrack.module.css.map": true,
+    "src/components/Core/Footer.module.css": true,
+    "src/components/Core/Footer.module.css.map": true,
+    "src/components/Core/Layout.module.css": true,
+    "src/components/Core/Layout.module.css.map": true,
+    "src/components/Core/Nav.module.css": true,
+    "src/components/Core/Nav.module.css.map": true
   }
 }

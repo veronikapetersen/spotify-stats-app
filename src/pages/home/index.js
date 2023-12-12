@@ -1,6 +1,6 @@
 import { getSession } from "next-auth/react";
 
-// import Layout from "@/components/Layout/Layout";
+import Layout from "@/components/Core/Layout";
 import Section from "@/components/ui/Section";
 import SectionWrapper from "@/components/ui/SectionWrapper";
 import ArtistList from "@/components/Artists/ArtistList";
@@ -13,7 +13,7 @@ import SpotlightTrack from "@/components/Spotlight/SpotlightTrack";
 export default function HomePage({ session }) {
   return (
     <>
-      {/* <Layout> */}
+      <Layout>
         <Hero />
         <ColorChange
           color="#AD96DC"
@@ -54,7 +54,7 @@ export default function HomePage({ session }) {
           </SectionWrapper>
         </Section>
 
-      {/* </Layout> */}
+      </Layout>
     </>
   );
 }
