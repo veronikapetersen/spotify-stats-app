@@ -1,0 +1,84 @@
+$disco-ball-size: 100px;
+$disco-ball-position: 50px;
+$square-size: 6px;
+
+@keyframes rotateDiscoBall {
+    0% {
+        transform: rotateX(90deg) rotateZ(0deg) rotate(0deg);
+    }
+
+    100% {
+        transform: rotateX(90deg) rotateZ(360deg) rotate(0deg);
+    }
+}
+
+@keyframes rotateDiscoBallMiddle {
+    0% {
+        transform: rotateX(90deg) rotateY(0deg) rotate(0deg);
+    }
+
+    100% {
+        transform: rotateX(90deg) rotateY(-360deg) rotate(0deg);
+    }
+}
+
+@keyframes reflect {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.4;
+    }
+}
+
+.discoBallContainer {
+    position: absolute;
+    top: 0;
+    left: 200px;
+}
+
+.discoBall {
+    transform-style: preserve-3d;
+    width: $disco-ball-size;
+    height: $disco-ball-size;
+    position: absolute;
+    top: $disco-ball-position;
+    left: 50%;
+    margin-left: -($disco-ball-size / 2);
+    animation: rotateDiscoBall 16s linear infinite;
+}
+
+.discoBallLight {
+    width: $disco-ball-size;
+    height: $disco-ball-size;
+    position: absolute;
+    top: $disco-ball-position;
+    left: 50%;
+    margin-left: -($disco-ball-size / 2);
+    border-radius: 100%;
+    background-color: white;
+    opacity: 0.2;
+    filter: blur(20px);
+}
+
+.square {
+    transform-style: preserve-3d;
+    position: absolute;
+    top: $disco-ball-position;
+    left: $disco-ball-position;
+    width: $square-size;
+    height: $square-size;
+    transform: rotateX(90deg) rotateY(0deg) translateZ(0px);
+}
+
+.discoBallMiddle {
+    height: 100%;
+    border-radius: 100%;
+    background-color: #111;
+    background: linear-gradient(to bottom, #111, #333);
+    position: absolute;
+    animation: rotateDiscoBallMiddle 16s linear infinite;
+}

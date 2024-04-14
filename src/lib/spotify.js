@@ -4,7 +4,7 @@ const fetchFromSpotify = async (url, req) => {
     const session = await getSession({ req });
     const accessToken = session?.user?.accessToken;
 
-    if (!accessToken) {
+    if (!accessToken) { // implement next auth logout function here
         throw new Error("User is not authenticated or token has expired");
     }
 
